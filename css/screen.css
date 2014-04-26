@@ -1,0 +1,87 @@
+/* $Mixins */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* ----------------------------------------------------- Browser specific CSS */
+/* apply only on JavaScript enabled browsers */
+/* apply only on Internet Explorer 7 and below */
+/* apply only on Internet Explorer 6 and below */
+body {
+  background: url(../img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: #02e7fe;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+section.artist {
+  background-color: rgba(51, 51, 51, 0.6);
+  border-radius: 2px;
+  padding: 10px 10px;
+  padding-bottom: 5px;
+  margin: 0 10px 20px 10px;
+  min-width: 440px;
+  display: inline-block;
+  position: relative;
+}
+section.artist iframe[src*="embed.spotify.com"] {
+  margin-left: -7px;
+}
+section.artist h2 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 20px;
+  font-weight: normal;
+}
+section.artist.pin {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 100%;
+  display: block;
+}
+section.artist .meta {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+section.artist .playerbutton {
+  color: #eee;
+  font-size: 30px;
+}
+@media screen and (max-width: 440px) {
+  section.artist {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px 0;
+    display: block;
+    min-width: 100%;
+  }
+}
