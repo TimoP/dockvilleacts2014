@@ -107,3 +107,17 @@ section.artist .playerbutton:hover {
     min-width: 100%;
   }
 }
+
+footer {
+  color: #fff;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+footer .subnav a {
+  background-color: #3f3f3f;
+}
+footer .subnav a:hover {
+  color: #fff;
+  background-color: #3f3f3f;
+}
