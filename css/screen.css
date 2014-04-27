@@ -46,16 +46,18 @@ h1 {
 .subnav {
   font-size: 18px;
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 .subnav ul li {
   display: inline-block;
 }
-.subnav ul li a {
+.subnav a {
   color: #7bb6af;
   padding: 3px;
 }
-.subnav ul li a:hover {
-  background-color: transparent;
+.subnav a:hover {
+  color: #fff;
+  background-color: #3f3f3f;
 }
 
 section.artist {
@@ -113,6 +115,9 @@ footer {
   border-top: 1px solid #eee;
   padding-top: 20px;
   margin-top: 20px;
+}
+footer .subnav {
+  text-transform: none;
 }
 footer .subnav a {
   background-color: #3f3f3f;
