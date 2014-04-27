@@ -10,13 +10,17 @@ $(function(){
 			meta = '<div class="meta"><ul><li><a href="'+acts[i][4]+'" target="_blank">Auf Soundcloud</a></li><li><a href="'+acts[i][1]+'" target="_blank">Auf MS DOCKVILLE</a></li></ul></div>';
 			//player = acts[i][4];
 		}
-		$('.wrapper').append('<section class="artist"><h2><a href="'+acts[i][1]+'" target="_blank">'+acts[i][0]+'</a></h2><div class="player" id="player'+i+'"><span data-act="'+i+'" class="playerbutton glyphicon glyphicon-play"></span></div>'+meta+'</section>');
+		$('.artists').append('<section class="artist"><h2><a href="'+acts[i][1]+'" target="_blank">'+acts[i][0]+'</a></h2><div class="player" id="player'+i+'"><span data-act="'+i+'" class="playerbutton glyphicon glyphicon-play"></span></div>'+meta+'</section>');
 	};
 
   $('iframe[src*="embed.spotify.com"]').each( function() {
     $(this).css('width',$(this).parent().width()-20);
     $(this).attr('src',$(this).attr('src'));
   });
+  $('iframe[src*="w.soundcloud.com"]').each( function() {
+    	$(this).css('width',$(this).parent().width()-20);
+    	//$(this).attr('src',$(this).attr('src'));
+  	});
 
   $('.playerbutton').on('click', function(){
   	var i = $(this).data('act');
@@ -37,13 +41,21 @@ $(window).resize(function() {
     $(this).css('width',$(this).parent().width()-20);
     //$(this).attr('src',$(this).attr('src'));
   });
+  $('iframe[src*="w.soundcloud.com"]').each( function() {
+    	$(this).css('width',$(this).parent().width()-20);
+    	//$(this).attr('src',$(this).attr('src'));
+  	});
 });
 
 function resizePlayer() {
 	$('iframe[src*="embed.spotify.com"]').each( function() {
-    $(this).css('width',$(this).parent().width()-20);
-    //$(this).attr('src',$(this).attr('src'));
-  });
+    	$(this).css('width',$(this).parent().width()-20);
+    	//$(this).attr('src',$(this).attr('src'));
+  	});
+  	$('iframe[src*="w.soundcloud.com"]').each( function() {
+    	$(this).css('width',$(this).parent().width()-20);
+    	//$(this).attr('src',$(this).attr('src'));
+  	});
 }
 
 
